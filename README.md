@@ -10,6 +10,7 @@
 
 <code>$ docker run -it vedantja/realestate_price_predictor</code>
 
+## Output
 ### You should see the following output:
 ```
 Enter information about the house below.
