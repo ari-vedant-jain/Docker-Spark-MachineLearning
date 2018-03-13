@@ -28,6 +28,7 @@ WORKDIR /
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+# Install Jython
 ENV JYTHON_VERSION 2.7.0
 RUN apt-get update && apt-get install -y curl && apt-get clean
 
