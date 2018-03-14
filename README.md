@@ -32,7 +32,7 @@ Mar 13, 2018 8:10:38 PM com.databricks.ml.local.util.Logging$class logInfo
 INFO: Importing version 0.1.1 regression.DecisionTreeRegressionModel model with 63 rows from pipeline/stages/2_DecisionTreeRegressor_4dd187cc681dd86b9635/data.
 ```
 
-#### And the output from will be like this: 
+#### And the prediction will be output like this: 
 ``` 
 {"prediction":571955.1501706485} 
 ```
