@@ -9,7 +9,7 @@ from flask import Flask, abort, request, jsonify
 app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
-def evaluate_text():
+def get_input():
     app.logger.info("{} request received from: {}".format(
         request.method, request.remote_addr))
     if not request.get_json():
