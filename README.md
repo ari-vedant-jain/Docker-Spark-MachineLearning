@@ -41,7 +41,7 @@ INFO: Importing version 0.1.1 regression.DecisionTreeRegressionModel model with 
 
 ## For running as Microservice inside a docker container
 
-<code>docker run -p 15000:5000 vedantja/model_microservice_example</code>
+<code>$ docker run -p 15000:5000 vedantja/model_microservice_example</code>
 ### You should see the following output:
 ```
 vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_example
@@ -52,7 +52,7 @@ vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_ex
 ```
 #### The application is running on port 5000. So open another terminal window and submit the following command:
 
-<code>curl -H 'Content-Type:application/jsms": 4, "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:15000</code>
+<code>$ curl -H 'Content-Type:application/jsms": 4, "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:15000</code>
 
 ### You will see the following output in the new window:
 ```
