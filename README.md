@@ -1,13 +1,6 @@
 # Containerized Model Serving using Databricks Model Export Library and Docker
 
-## As a standalone app (outside of docker), use the following command:
-
-<code>$ cd docker/ </code>
-
-<code> $ jython -J-cp dbml-local-0.3.0-spark2.3.jar housing.py</code>
-
-
-## For running in docker
+## For running in interactive mode
 
 
 <code>$ docker run -it vedantja/realestate_price_predictor</code>
@@ -39,7 +32,7 @@ INFO: Importing version 0.1.1 regression.DecisionTreeRegressionModel model with 
 {"prediction":571955.1501706485} 
 ```
 
-## For running as Microservice inside a docker container
+## For running as Microservice
 
 <code>$ docker run -p 15000:5000 vedantja/model_microservice_example</code>
 ### You should see the following output:
