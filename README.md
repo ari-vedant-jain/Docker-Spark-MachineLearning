@@ -59,17 +59,17 @@ vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_ex
 
 See example below:</i>
 
-####### Clone the repo
+##### Clone the repo
 `$ git clone https://github.com/vedantja/Docker-Spark-MachineLearning.git`
 
-####### Go to the folder
+##### Go to the folder
 
 `$ cd Docker-Spark-MachineLearning/byom_microservice`
 
-####### Build the docker image
+##### Build the docker image
 `$ docker build -t byom_microservice .`
 
-####### Create a container
+##### Create a container
 `$ docker run \
 -e access_key="xxxxxxxxxxxxxxx" \
 -e secret_access="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
