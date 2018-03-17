@@ -1,6 +1,6 @@
 # Containerized Model Serving using Databricks Model Export Library and Docker
 
-<i>This demo only works for zip code in the Seattle metro area. In order to run this with your own model, replace the "pipeline" folder with your own. </i>
+<i>This demo only works for zip code in the Seattle metro area. In order to run this with your own model, replace the "pipeline" under the resources folder with your own. </i>
 
 ## For running in interactive mode
 
