@@ -8,8 +8,8 @@ import zipfile
 # See: http://boto3.readthedocs.org/en/latest/guide/configuration.html
 
 session = boto3.session.Session(
-    aws_access_key_id="AKIAI6BI3WEWHFQOFPHQ", 
-    aws_secret_access_key="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"
+    aws_access_key_id="xxxxxxxxxxxxxxxxxxx", 
+    aws_secret_access_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 )
 
 s3 = session.resource("s3")
