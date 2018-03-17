@@ -4,7 +4,7 @@ import os
 
 os.system('python download_model.py')
 import sys
-sys.path.append('dbml-local-0.3.0-spark2.3.jar')
+sys.path.append('../resources/dbml-local-0.3.0-spark2.3.jar')
 
 from com.databricks.ml.local import ModelFactory
 from flask import Flask, abort, request, jsonify
