@@ -14,8 +14,8 @@ session = boto3.session.Session(
 )
 
 s3 = session.resource("s3")
-bucket = s3.Bucket('databricks-demo-bucket')
-KEY = 'housing/model/pipeline.zip'
+bucket = s3.Bucket(sys.argv[3])
+KEY = sys.argv[4]
 file = 'pipeline.zip'
 try:
     bucket.download_file(KEY, file)

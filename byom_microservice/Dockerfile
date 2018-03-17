@@ -42,4 +42,4 @@ RUN ln -s $HOME/jython-${JYTHON_VERSION}/bin/jython /usr/bin
 RUN rm jython_installer-${JYTHON_VERSION}.jar
 RUN jython -m pip install flask boto3
 
-CMD jython app.py $access_key $secret_access
+CMD jython app.py $access_key $secret_access $bucket_name $zip_file_path

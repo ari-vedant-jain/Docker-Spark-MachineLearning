@@ -3,7 +3,7 @@
 import os
 import sys
 
-cmd = "python download_model.py %s %s" % (sys.argv[1],sys.argv[2])
+cmd = "python download_model.py %s %s %s %s" % (sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4])
 os.system(cmd)
 sys.path.append('dbml-local-0.3.0-spark2.3.jar')
 
