@@ -9,13 +9,8 @@ import sys
 # See: http://boto3.readthedocs.org/en/latest/guide/configuration.html
 
 session = boto3.session.Session(
-<<<<<<< HEAD:autoscaling_microservice/download_model.py
-    aws_access_key_id="xxxxxxxxxxxxxxxxxxx", 
-    aws_secret_access_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-=======
     aws_access_key_id=sys.argv[1], 
     aws_secret_access_key=sys.argv[2]
->>>>>>> adding bring your own model (BYOM) capability:byom_microservice/download_model.py
 )
 
 s3 = session.resource("s3")
