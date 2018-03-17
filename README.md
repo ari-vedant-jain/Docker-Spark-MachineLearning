@@ -33,7 +33,7 @@ INFO: Importing version 0.1.1 regression.DecisionTreeRegressionModel model with 
 {"prediction":571955.1501706485} 
 ```
 
-## (Option 2a) For running as a Microservice
+## (Option 2a) For running as a Microservice with the housing model
 
 <code>$ docker run -p 15000:5000 vedantja/model_microservice_example</code>
 ### You should see the following output:
