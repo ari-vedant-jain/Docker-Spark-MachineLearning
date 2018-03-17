@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-sys.path.append('dbml-local-0.3.0-spark2.3.jar')
+sys.path.append('../resources/dbml-local-0.3.0-spark2.3.jar')
 
 from com.databricks.ml.local import ModelFactory
 from flask import Flask, abort, request, jsonify
@@ -16,7 +16,7 @@ def get_input():
        app.logger.error("Request has no data or request is not json, aborting")
        abort(400)
 
-    localModel = ModelFactory.loadModel("pipeline/")
+    localModel = ModelFactory.loadModel("../resources/pipeline/")
     localModel.setOutputCols("prediction")
     data = request.data
     pred = localModel.transform(data)
