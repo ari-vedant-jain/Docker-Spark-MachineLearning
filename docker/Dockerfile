@@ -8,8 +8,8 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 ADD housing.py /
-ADD dbml-local-0.3.0-spark2.3.jar /
-ADD pipeline /pipeline
+ADD ../resources/dbml-local-0.3.0-spark2.3.jar /
+ADD ../resources/pipeline /pipeline
 
 # Install Java.
 RUN \
