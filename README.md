@@ -2,7 +2,7 @@
 
 <i>This demo only works for zip code in the Seattle metro area. In order to run this with your own model, replace the "pipeline" under the resources folder with your own. </i>
 
-## For running in interactive mode
+## (Option 1) For running in interactive mode
 
 
 <code>$ docker run -it vedantja/realestate_price_predictor</code>
@@ -33,7 +33,7 @@ INFO: Importing version 0.1.1 regression.DecisionTreeRegressionModel model with 
 {"prediction":571955.1501706485} 
 ```
 
-## For running as a Microservice
+## (Option 2a) For running as a Microservice
 
 <code>$ docker run -p 15000:5000 vedantja/model_microservice_example</code>
 ### You should see the following output:
@@ -47,6 +47,39 @@ vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_ex
 #### The application is running on port 5000. So open another terminal window and submit the following command:
 
 <code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000/code>
+
+## (Option 2b) For running with your own model in the microservice
+
+<i>You can use this to get predictions from your own model. Following are the prerequisites:
+1. Model/Pipeline should have been exported using Databricks Model Export library
+2. The model exprt should be stored on an S3 bucket and in zip format
+3. Access key and secret access for an IAM user with ability to read from S3
+4. Name of the S3 bucket and full path of the file
+5. Git clone of this repository
+
+See example below:</i>
+<code>$ git clone https://github.com/vedantja/Docker-Spark-MachineLearning.git</code>
+<code>$ cd Docker-Spark-MachineLearning/byom_microservice</code>
+<code>$ docker run \
+-e access_key="xxxxxxxxxxxxxxx" \
+-e secret_access="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \
+-e bucket_name="xxxxxxxxxxxxx" \
+-e zip_file_path="/path/to/zipfile" \
+-p 15000:5000 byom_microservice</code>
+
+
+### You should see the following output:
+```
+vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_example
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 556-327-343
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+```
+#### The application is running on port 5000. So open another terminal window and submit the following command:
+
+<code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000/code>
+
 
 ### You will see the following output in the new window:
 ```
