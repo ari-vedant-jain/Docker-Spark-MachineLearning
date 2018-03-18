@@ -19,8 +19,10 @@ def get_input():
     if not request.get_json():
        app.logger.error("Request has no data or request is not json, aborting")
        abort(400)
-
-    localModel = ModelFactory.loadModel("dbfs/mnt/ved-demo/housing/pipeline/")
+    pipeline = sys.argv[4]
+    pipeline = pipeline.replace(".zip", "/")
+    path = "dbfs/mnt/ved-demo/" + pipeline
+    localModel = ModelFactory.loadModel(path)
     localModel.setOutputCols("prediction")
     data = request.data
     pred = localModel.transform(data)
