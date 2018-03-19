@@ -1,0 +1,8 @@
+gt,label
+stairsup,5
+walk,0
+sit,1
+stand,3
+null,4
+stairsdown,6
+bike,2
