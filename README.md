@@ -46,7 +46,7 @@ vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_ex
 ```
 #### The application is running on port 5000. So open another terminal window and submit the following command:
 
-<code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000/code>
+<code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000</code>
 
 ## (Option 2b) For running with your own model in the microservice
 
@@ -88,7 +88,7 @@ vjain:docker vedantjain$ docker run -p 15000:5000 vedantja/model_microservice_ex
 ```
 #### The application is running on port 5000. So open another terminal window and submit the following command:
 
-<code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000</code>
+<code>$ curl -H 'Content-Type:application/json' -d '{"bedrooms": 5, "bathrooms": 3,  "sqft_living": 1000, "sqft_lot": 2000, "zipcode": "98039", "condition": 5}' localhost:5000<</code>
 
 
 ### You will see the following output in the new window:
