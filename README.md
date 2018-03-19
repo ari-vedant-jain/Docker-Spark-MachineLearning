@@ -69,13 +69,13 @@ See example below:</i>
 ##### 3. Build the docker image
 `$ docker build -t byom_microservice .`
 
-##### 4. Create a container
-`$ docker run \
--e access_key="xxxxxxxxxxxxxxx" \
--e secret_access="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \ . 
--e bucket_name="xxxxxxxxxxxxx" \ . 
--e zip_file_path="/path/to/zipfile" \ . 
--p 15000:5000 byom_microservice` . 
+##### 4. Start a container
+`$ docker run 
+-e access_key="xxxxxxxxxxxxxxx" 
+-e secret_access="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
+-e bucket_name="xxxxxxxxxxxxx"
+-e zip_file_path="/path/to/zipfile"
+-p 15000:5000 byom_microservice`
 
 
 ### You should see the following output:
