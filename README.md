@@ -70,8 +70,8 @@ See example below:</i>
 `$ docker build -t byom_microservice .`
 
 ##### 4. Create a container
-`$ docker run \ &nbsp;
--e access_key="xxxxxxxxxxxxxxx" \ &nbsp;
+`$ docker run \
+-e access_key="xxxxxxxxxxxxxxx" \
 -e secret_access="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" \ . 
 -e bucket_name="xxxxxxxxxxxxx" \ . 
 -e zip_file_path="/path/to/zipfile" \ . 
